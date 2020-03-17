@@ -234,7 +234,22 @@ header .header-cases {
 }
 
 @media only screen and (min-width: 1000px) {
-    
+    .index-banner {
+        max-width: 1600px;
+        height: 420px;
+        margin: 0 auto;
+    }
+
+    .index-banner h1 {
+        display: block;
+        width: 550px;
+        margin: 20px auto;
+    }
+
+    .boxlink-wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
 }
 
 
