@@ -6,12 +6,14 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "footer footer"
+    "title title"
     "header header"
-    "content sidebar"
-    "title title";
+    "content content"
+    "sidebar sidebar"
+    "footer footer";
+    grid-gap: 10px;
 }
 
 .title {
@@ -34,12 +36,23 @@
     grid-area: footer;
 }
 
-
-
 .grid div:nth-child(even) {
     background-color: red;
 }
 
 .grid div:nth-child(odd) {
     background-color: green;
+}
+
+@media screen and (min-width: 736px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 500px 500px 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". title title ."
+        ". header header ."
+        ". content sidebar ."
+        ". footer footer .";
+    }
 }
