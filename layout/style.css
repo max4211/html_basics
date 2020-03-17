@@ -6,12 +6,34 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "footer footer"
+    "header header"
+    "content sidebar"
+    "title title";
 }
 
 .title {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-area: title;
 }
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
 
 
 .grid div:nth-child(even) {
