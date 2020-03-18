@@ -1,0 +1,1 @@
+document.body.innerHTML="Conent is king"
