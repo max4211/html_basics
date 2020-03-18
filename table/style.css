@@ -1,3 +1,8 @@
+:root {
+    --even-color: #E5C1E5;
+    --odd-color: #F3F3F3;
+}
+
 table {
     width: 400px;
 
@@ -17,9 +22,9 @@ th, td {
 }
 
 tr:nth-child(even) {
-    background-color: white;
+    background-color: var(--even-color);
 }
 
 tr:nth-child(odd) {
-    background-color: #ddd;
+    background-color: var(--odd-color);
 }
