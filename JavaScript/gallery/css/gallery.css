@@ -1,0 +1,135 @@
+/* 
+Gallery container 
+ 1. Format grid
+ 2. Position images inside grid within template
+  */
+#index-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "gallery-p gallery-p gallery-p gallery-p"
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4"
+    "img5 img6 img3 img7"
+  ;
+}
+
+#index-gallery .gallery-img {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Images- grid area is name inside grid spacing */
+#index-gallery .img-1 {
+  grid-area: img1;
+  background-image: url("../img/thumbs/img1.jpg");
+}
+
+#index-gallery .img-2 {
+  grid-area: img2;
+  background-image: url("../img/thumbs/img2.jpg");
+}
+
+#index-gallery .img-3 {
+  grid-area: img3;
+  background-image: url("../img/thumbs/img3.jpg");
+  height: 610px;
+}
+
+#index-gallery .img-4 {
+  grid-area: img4;
+  background-image: url("../img/thumbs/img4.jpg");
+}
+
+#index-gallery .img-5 {
+  grid-area: img5;
+  background-image: url("../img/thumbs/img5.jpg");
+}
+
+#index-gallery .img-6 {
+  grid-area: img6;
+  background-image: url("../img/thumbs/img6.jpg");
+}
+
+#index-gallery .img-7 {
+  grid-area: img7;
+  background-image: url("../img/thumbs/img7.jpg");
+}
+
+/* Images text elements */
+#index-gallery p {
+  grid-area: gallery-p;
+}
+
+#index-gallery h2 {
+  grid-area: gallery-h2;
+}
+
+/* Gallery image titles */
+.gallery-img div {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-img div a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gallery-img div:hover {
+  opacity: 0.7;
+  transition: all ease-in-out 100ms;
+}
+
+/* Popup window when clicked */
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.img-window img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+/* Style gallery next and prev image buttons */
+.img-btn {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.img-btn:hover {
+    opacity: 0.8;
+}
