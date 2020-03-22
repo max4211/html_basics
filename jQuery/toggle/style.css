@@ -52,6 +52,7 @@ body {
 }
 
 .nav-sidebar {
+    display: none;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -60,7 +61,7 @@ body {
     padding: 0 5px;
     background-color: #1b1b1b;
     z-index: 1000;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .nav-sidebar ul {

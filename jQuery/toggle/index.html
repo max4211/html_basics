@@ -27,7 +27,7 @@
       </ul>
     </nav>
 
-    <aside class="nav-sidebar">
+    <div class="nav-sidebar">
       <ul>
         <li><span>Projects</span></li>
         <li><a href="#">Brick Breaker</a></li>
@@ -35,14 +35,15 @@
         <li><a href="#">Cheffing Dankery</a></li>
         <li><a href="#">Photography</a></li>
       </ul>
-    </aside>
+    </div>
 
   </body>
 
   <script>
     $(document).ready(function() {
       $(".btn-toggle-nav").click(function() {
-        $(".nav-sidebar").fadeToggle(1000);
+        console.log("sliding side menu")
+        $(".nav-sidebar").slideToggle(1000);
       });
     });
   </script>
