@@ -29,3 +29,21 @@ section {
     color: white;
     background-color: red;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    line-height: 200px;
+    float: left;
+    display: block;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+}
