@@ -9,6 +9,7 @@ $(document)
 
     $("#btn2")
       .click(function() {
+        $("#test2").html("<i>My text is now in italics</i>");
         alert($("#test2")
           .html());
       });
