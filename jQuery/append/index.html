@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div id="container">
+      <p id="p-first">The first paragraph</p>
+      <p id="p-second">The second paragraph</p>
+      <p id="p-third">The third paragraph</p>
+    </div>
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      /*
+      In jQuery we can insert new content without replacing/deleting the existing content, like we do when using innerHTML.
+      We can do this using the following jQuery functions:
+        Append() - inserts new content inside container, but after existing content
+        Prepend() - inserts new content inside container, but before existing content
+        Before() - inserts new content outside container, but before existing content
+        After() - inserts new content outside container, but after existing content
+      */
+      $("#container").prepend("<p>Cool paragraph before content</p>");
+      $("#container").append("<p>A new paragraph</p>", "<p>Another paragraph</p>");
+      $("#container").before("<h1>New header</h1>");
+
+    });
+  </script>
+</html>
